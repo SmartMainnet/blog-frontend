@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# ignore log files
+.idea/
+
+# misc
+.env
