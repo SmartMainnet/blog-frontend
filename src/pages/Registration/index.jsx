@@ -12,7 +12,7 @@ import axios from '../../axios'
 import { fetchRegister, selectIsAuth } from '../../redux/slices/auth'
 
 export const Registration = () => {
-  const [avatarUrl, setAvatarUrl] = React.useState('/uploads/avatar.png')
+  const [avatarUrl, setAvatarUrl] = React.useState()
 
   const isAuth = useSelector(selectIsAuth)
   const dispatch = useDispatch()

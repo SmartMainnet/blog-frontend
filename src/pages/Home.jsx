@@ -37,7 +37,9 @@ export const Home = () => {
                 imageUrl={post.imageUrl ? process.env.REACT_APP_API_URL + post.imageUrl : ''}
                 user={{
                   ...post.user,
-                  avatarUrl: process.env.REACT_APP_API_URL + post.user.avatarUrl,
+                  avatarUrl: post.user.avatarUrl
+                    ? process.env.REACT_APP_API_URL + post.user.avatarUrl
+                    : 'https://static.tildacdn.com/tild3266-3839-4665-a533-623166323531/no-profile.png',
                 }}
                 createdAt={post.createdAt}
                 viewsCount={post.viewsCount}

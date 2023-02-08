@@ -36,7 +36,9 @@ export const FullPost = () => {
         imageUrl={data.imageUrl ? process.env.REACT_APP_API_URL + data.imageUrl : ''}
         user={{
           ...data.user,
-          avatarUrl: process.env.REACT_APP_API_URL + data.user.avatarUrl,
+          avatarUrl: data.user.avatarUrl
+            ? process.env.REACT_APP_API_URL + data.user.avatarUrl
+            : 'https://static.tildacdn.com/tild3266-3839-4665-a533-623166323531/no-profile.png',
         }}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}
