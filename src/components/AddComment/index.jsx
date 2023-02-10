@@ -10,7 +10,7 @@ export const Index = () => {
       <div className={styles.root}>
         <Avatar
           classes={{ root: styles.avatar }}
-          src='https://mui.com/static/images/avatar/5.jpg'
+          src='https://static.tildacdn.com/tild3266-3839-4665-a533-623166323531/no-profile.png'
         />
         <div className={styles.form}>
           <TextField
