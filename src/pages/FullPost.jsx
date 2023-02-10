@@ -40,7 +40,14 @@ export const FullPost = () => {
             ? process.env.REACT_APP_API_URL + data.user.avatarUrl
             : 'https://static.tildacdn.com/tild3266-3839-4665-a533-623166323531/no-profile.png',
         }}
-        createdAt={data.createdAt}
+        createdAt={new Date(data.createdAt).toLocaleString('ru', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          weekday: 'long',
+          hour: 'numeric',
+          minute: 'numeric',
+        })}
         viewsCount={data.viewsCount}
         commentsCount={0}
         tags={data.tags}

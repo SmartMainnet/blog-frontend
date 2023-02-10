@@ -52,7 +52,14 @@ export const Home = () => {
                     ? process.env.REACT_APP_API_URL + post.user.avatarUrl
                     : 'https://static.tildacdn.com/tild3266-3839-4665-a533-623166323531/no-profile.png',
                 }}
-                createdAt={post.createdAt}
+                createdAt={new Date(post.createdAt).toLocaleString('ru', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                  weekday: 'long',
+                  hour: 'numeric',
+                  minute: 'numeric',
+                })}
                 viewsCount={post.viewsCount}
                 commentsCount={0}
                 tags={post.tags}
